@@ -1,0 +1,16 @@
+<% include partials/header.ejs %>
+
+<div class="container">
+    <h2 class="pt-4">Join an Experiment</h2>
+    <form action="/join" method="post">
+        <% if(messages['error']) { %>
+            <div class="alert alert-danger" role="alert">
+                <%= messages['error'] %>
+            </div>
+        <% } %>
+        <input class="form-control" type="number" placeholder="Access Code" name="accessCode"/>
+        <button class="btn btn-primary mt-2">Join</button>
+    </form>
+</div>
+
+<% include partials/footer.ejs %>

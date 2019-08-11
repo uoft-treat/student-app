@@ -32,7 +32,7 @@ app.post('/join', async (req, res) => {
     } else {
         let result;
         try {
-            result = await request("http://localhost:3000/graphql", `
+            result = await request("https://graphql.treatproject.tk/graphql", `
                 query ($accessCode: String!) {
                   experimentSession(accessCode: $accessCode) {
                     _id

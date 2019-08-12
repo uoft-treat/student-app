@@ -1,6 +1,13 @@
 <% include partials/header.ejs %>
 
-<div class="container">
+<style>
+    .app {
+        text-align: center;
+        padding-top: 100px;
+    }
+</style>
+
+<div class="container app">
     <h2 class="pt-4">Join an Experiment</h2>
     <form action="/join" method="post">
         <% if(messages['error']) { %>
@@ -8,7 +15,7 @@
                 <%= messages['error'] %>
             </div>
         <% } %>
-        <input class="form-control" type="number" placeholder="Access Code" name="accessCode"/>
+        <input class="form-control code-input" type="number" placeholder="Access Code" name="accessCode"/>
         <button class="btn btn-primary mt-2">Join</button>
     </form>
 </div>
